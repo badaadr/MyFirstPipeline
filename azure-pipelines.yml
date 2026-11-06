@@ -1,0 +1,18 @@
+trigger:
+- main
+
+pool:
+  vmImage: 'windows-latest'
+
+steps:
+- task: PowerShell@2
+  displayName: 'Build application'
+  inputs:
+    targetType: 'filePath'
+    filePath: 'scripts/build.ps1'
+
+- task: PowerShell@2
+  displayName: 'Run automated tests'
+  inputs:
+    targetType: 'filePath'
+    filePath: 'tests/test-build.ps1'
