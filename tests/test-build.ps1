@@ -9,7 +9,7 @@ if (!(Test-Path $resultFile)) {
 
 $content = Get-Content $resultFile -Raw
 
-if ($content -notmatch "Build completed successfully") {
+if ($content -notmatch "THIS SHOULD FAIL") {
     Write-Error "Build validation failed!"
     exit 1
 }
