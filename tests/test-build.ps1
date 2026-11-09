@@ -15,4 +15,5 @@ if ($content -notmatch "Build completed successfully") {
 }
 
 Write-Host "All tests passed!"
+Write-Host "Test execution completed successfully at $(Get-Date)"
 exit 0
