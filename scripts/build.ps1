@@ -10,3 +10,4 @@ if (!(Test-Path $buildDirectory)) {
     Out-File "$buildDirectory\build-result.txt"
 
 Write-Host "Build completed!"
+Write-Host "Build version: 1.1"
